@@ -8,7 +8,10 @@ import {
   Menu, X, AlertTriangle, CheckCircle, MessageSquare, Star, Users, 
   Bell, Settings, Plus, Upload, RefreshCw, Send, ChevronDown, MapPin,
   Sliders, FileText, Image as ImageIcon, Mail, User, Shield, Crown,
-  Edit, Trash2, Eye, EyeOff, Filter, Search, Download, Share2
+  Edit, Trash2, Eye, EyeOff, Filter, Search, Download, Share2,
+  BarChart as BarChartIcon,
+  PieChart as PieChartIcon,
+  LineChart as LineChartIcon,
 } from 'lucide-react';
 import { format, subDays } from 'date-fns';
 
@@ -405,12 +408,12 @@ View full dashboard: https://restopulse-lite.pages.dev
   };
 
   // Sidebar Navigation Items
-  const navItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: <BarChart size={18} /> },
-    { id: 'reviews', label: 'Reviews', icon: <MessageSquare size={18} /> },
-    { id: 'staff', label: 'Staff', icon: <Users size={18} /> },
-    { id: 'settings', label: 'Settings', icon: <Settings size={18} /> },
-  ];
+const navItems = [
+  { id: 'dashboard', label: 'Dashboard', icon: <BarChartIcon size={18} /> },
+  { id: 'reviews', label: 'Reviews', icon: <MessageSquare size={18} /> },
+  { id: 'staff', label: 'Staff', icon: <Users size={18} /> },
+  { id: 'settings', label: 'Settings', icon: <Settings size={18} /> },
+];
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans">
