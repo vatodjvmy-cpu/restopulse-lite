@@ -53,6 +53,7 @@ const GlowButton = ({ children, onClick, className = '', variant = 'cyan', disab
     cyan: 'bg-cyan-500/20 text-cyan-400 hover:bg-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.4)]',
     blue: 'bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 shadow-[0_0_15px_rgba(59,130,246,0.4)]',
     red: 'bg-red-500/20 text-red-400 hover:bg-red-500/30 shadow-[0_0_15px_rgba(239,68,68,0.4)]',
+    purple: 'bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 shadow-[0_0_15px_rgba(139,92,246,0.4)]',
   };
   
   return (
