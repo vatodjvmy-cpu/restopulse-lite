@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  PieChart, Pie, Cell, LineChart, Line, Legend, RadialBarChart, RadialBar
+  PieChart, Pie, Cell, LineChart, Line, Legend
 } from 'recharts';
 import { 
   Menu, X, AlertTriangle, CheckCircle, MessageSquare, Star, Users, 
@@ -47,7 +47,7 @@ const NeoCard = ({ children, className = '', critical = false, gradient = 'blue-
 
 // Glowing Button Component
 const GlowButton = ({ children, onClick, className = '', variant = 'cyan', disabled = false }: { 
-  children: React.ReactNode; onClick?: () => void; className?: string; variant?: 'cyan' | 'blue' | 'red'; disabled?: boolean 
+  children: React.ReactNode; onClick?: () => void; className?: string; variant?: 'cyan' | 'blue' | 'red' | 'purple'; disabled?: boolean 
 }) => {
   const variants: Record<string, string> = {
     cyan: 'bg-cyan-500/20 text-cyan-400 hover:bg-cyan-500/30 shadow-[0_0_15px_rgba(6,182,212,0.4)]',
@@ -170,7 +170,9 @@ export default function App() {
         setTimeout(() => setScanProgress(''), 4000);
       }, settings.scanIntervalMinutes * 60000);
     }
-    return () => clearInterval(interval);
+    return () => {
+      if (interval) clearInterval(interval);
+    };
   }, [autoScanEnabled, branches, settings.scanIntervalMinutes]);
 
   // Filter reviews to selected branch + 7 days
@@ -644,7 +646,7 @@ View full dashboard: https://restopulse-lite.pages.dev
       </aside>
 
       {/* Main Content Area */}
-      <main className={`pt-4 pb-8 px-4 transition-all duration-300 ${sidebarOpen ? 'md:ml-20 lg:ml-56' : 'md:ml-20 lg:ml-56'}`}>
+      <main className={`pt-4 pb-20 md:pb-8 px-4 transition-all duration-300 ${sidebarOpen ? 'md:ml-20 lg:ml-56' : 'md:ml-20 lg:ml-56'}`}>
         <div className="max-w-7xl mx-auto">
           <AnimatePresence mode="wait">
             
