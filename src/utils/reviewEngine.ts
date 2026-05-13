@@ -1,3 +1,4 @@
+import { StaffMember } from '../types';
 import { Review, ResponseTemplate, Branch } from '../types';
 import { storage, getDefaultCriticalKeywords } from './storage';
 
