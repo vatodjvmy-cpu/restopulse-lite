@@ -141,7 +141,7 @@ export default function App() {
 
   // Auto-scan polling effect
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: ReturnType<typeof setTimeout> | undefined;
     if (autoScanEnabled) {
       interval = setInterval(async () => {
         setScanProgress('🔄 Auto-scanning reviews...');
